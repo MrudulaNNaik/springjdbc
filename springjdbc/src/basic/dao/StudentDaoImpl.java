@@ -48,7 +48,12 @@ public class StudentDaoImpl  implements StudentDao{
 		int noRecordsDeleted = jdbcTemplate.update(sql,name,sem);
 		System.out.println("no of records deleted ="+ noRecordsDeleted);
 		return noRecordsDeleted;
-		
-		
 	}
+	
+	public void cleanUp() {
+		String sql = "TRUNCATE TABLE STUDENT";
+		jdbcTemplate.update(sql);
+		System.out.println("table cleaned");
+	}
+	
 }
