@@ -39,7 +39,10 @@ public class Student {
 	public void setAverage(int average) {
 		this.average = average;
 	}
-	
+	 @Override 
+	 public String toString() {
+		 return "\n toString ccalled\t " +name+ "\t" +sem+ "\t" + average;
+	 }
 	
 
 }
