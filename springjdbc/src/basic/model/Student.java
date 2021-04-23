@@ -1,6 +1,7 @@
 package basic.model;
 
 public class Student {
+	
 	int id;
 	String name;
 	int sem;
@@ -8,13 +9,14 @@ public class Student {
 	
 	
 	
-	public Student(int id, String name, int sem, int average) {
+	public Student() {
 		super();
 		this.id = id;
 		this.name = name;
 		this.sem = sem;
 		this.average = average;
 	}
+	
 	public int getId() {
 		return id;
 	}
@@ -39,6 +41,8 @@ public class Student {
 	public void setAverage(int average) {
 		this.average = average;
 	}
+	
+	
 	 @Override 
 	 public String toString() {
 		 return "\n toString ccalled\t " +name+ "\t" +sem+ "\t" + average;

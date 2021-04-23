@@ -32,6 +32,4 @@
 	<bean id="studentDao" class="basic.dao.StudentDaoImpl">
 		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
 	</bean>
-</beans>
-
-	
+</beans> 

@@ -14,9 +14,9 @@ public class StudentRowMapper implements RowMapper<Student> {
 		String name  = rs.getString("name");
 		int sem = rs.getInt("sem");
 		int avg = rs.getInt("average");
-		Student newStudent = new Student(id,name,sem,avg);
+		Student newStudent = new Student();
 		
-		
+		System.out.println("maprow method called");
 		return newStudent;
 	}
 

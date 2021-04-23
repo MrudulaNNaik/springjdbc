@@ -14,8 +14,14 @@ public class PlayJdbc {
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		StudentDaoImpl studentDao = (StudentDaoImpl) context.getBean("studentDao");
-		List<Student> students = studentDao.getAllStudents();
-		printStudents(students);
+		 List<Student> students = studentDao.getAllStudents();
+		  printStudents(students);
+
+		
+		System.out.println(studentDao.findStudentById(1));
+		
+		//List<Student> students = studentDao.getAllStudents();
+		//printStudents(students);
 		
 	
 		
