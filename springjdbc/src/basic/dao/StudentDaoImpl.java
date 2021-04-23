@@ -1,5 +1,8 @@
 package basic.dao;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,4 +59,16 @@ public class StudentDaoImpl  implements StudentDao{
 		System.out.println("table cleaned");
 	}
 	
+	public void insert(List<Student> students) {
+		String sql = "INSERT INTO student VALUES (?,?,?,?)";
+		ArrayList<Object[]> sqlArgs = new ArrayList<>();
+		for(Student student : students) {
+			Object[] studentData = {student.getId(),student.getName(),student.getSem(),student.getAverage()};
+			sqlArgs.add(studentData);
+		}
+
+		jdbcTemplate.batchUpdate(sql, sqlArgs);
+		
+		
+	}
 }
